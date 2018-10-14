@@ -14,15 +14,15 @@ p {
 }
 
 a {
-  color: #fed136;
+  color: orange;
 }
 
 a:hover {
-  color: #fec503;
+  color: orange;
 }
 
 .text-primary {
-  color: #fed136 !important;
+  color: orange !important;
 }
 
 h1,
@@ -63,6 +63,7 @@ section h3.section-subheading {
 .btn {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-weight: 700;
+  color:black;
 }
 
 .btn-xl {
@@ -71,13 +72,13 @@ section h3.section-subheading {
 }
 
 .btn-primary {
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: white;
+  border-color: black;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #fec810 !important;
-  border-color: #fec810 !important;
+  background-color: orange !important;
+  border-color: black !important;
   color: white;
 }
 
@@ -175,8 +176,8 @@ img::-moz-selection {
 
 header.masthead {
   text-align: center;
-  color: indianred;
-  background-image: url(https://www.freewebheaders.com/wordpress/wp-content/gallery/medical/stethoscope-medical-check-up-website-header.jpg);
+  color: black;
+  background-image: url(https://www.investinfinland.fi/documents/162753/241194/DNA-light-1800x685.png/89abc50f-8131-42db-9a14-f78b5b27d3b8?t=1490353893110);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -206,7 +207,7 @@ header.masthead .intro-text .intro-heading {
 
 @media (min-width: 768px) {
   header.masthead .intro-text {
-    padding-top: 300px;
+    padding-top: 190px;
     padding-bottom: 200px;
   }
   header.masthead .intro-text .intro-lead-in {
@@ -695,17 +696,21 @@ ul.social-buttons li a {
 }
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-  background-color: #fed136;
+  background-color: orange;
 }
 .divbutton1 {
     width: 50%;
     float: left;
     align-content: left;
+    padding-top: 45px;
+    padding-left:60px
 }
 .divbutton2 {
     width: 50%;
     float: right;
     align-content: right;
+    padding-top: 45px;
+    padding-right:60px;
 }
 .pagemiddle {
     vertical-align: middle

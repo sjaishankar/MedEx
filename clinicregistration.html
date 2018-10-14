@@ -30,14 +30,14 @@
         <h1 class = "title">MedEx Clinic Registration</h1>
       </div>
     </nav>
-    <div class = "info">
+    <div class = "info" controller="formController">
         <form class = "form">
             <p>Clinic Name: </p>
             <p><input type = "text" name = "clinicname"></p>
             <p>Email Address:</p>
             <p><input type = "text" name = "email"></p>
             <p>Zip Code:<p>
-            <p><input type = "text" name = "zipcode" id = "zipcode"></p>
+            <p><input type = "text" ng-model="zipcode" name = "zipcode" id = "zipcode"></p>
             <p>Number of Beds:</p>
             <p><input type = "text" name = "beds"></p>
             <p><input type = "submit" name = "submit"></p>
@@ -53,11 +53,6 @@
                 zoom: 3
             });
         }
-        /*function codeAddress() {
-            var zipCode = document.getElementById("zipcode").value;
-            map.setCenter(zipCode.geometry.location);
-        });*/
-
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2BxSbYZHzLhxHWHKzV2zcVOv-6YOdnkA&callback=initMap"
     async defer></script>
