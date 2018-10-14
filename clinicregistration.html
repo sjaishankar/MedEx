@@ -22,7 +22,7 @@
 
 </head>
 
-  <body id="page-top" style="background-color:#BDEDFF">
+  <body id="page-top" style="background-image: url(/img/background4.png)">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -32,16 +32,15 @@
     </nav>
     <div class = "info" controller="formController">
         <form class = "form">
-            <p>Clinic Name: </p>
-            <p><input type = "text" name = "clinicname"></p>
-            <p>Email Address:</p>
-            <p><input type = "text" name = "email"></p>
-            <p>Zip Code:<p>
-            <p><input type = "text" ng-model="zipcode" name = "zipcode" id = "zipcode"></p>
-            <p>Number of Beds:</p>
-            <p><input type = "text" name = "beds"></p>
+            <p>First Name: <input type = "text" name = "firstname" style="width:100px"> Last Name: <input type = "text" name = "lastname" style="width:150px"></p>
+            <p>Phone Number: <input type = "text" name = "number" style="width:125px"></p>
+            <p>Clinic Name: <input type = "text" name = "clinicname"></p>
+            <p>Email: <input type = "text" name = "email"></p>
+            <p>Zip Code: <input type = "text" ng-model="zipcode" name = "zipcode" id = "zipcode" style="width:75px"><p>
+            <p>Number of Beds: <input type = "text" name = "beds" style="width:50px"></p>
             <p><input type = "submit" name = "submit"></p>
         </form>
+        <p style="padding-left:6em">Already a user? <a href="https://www.google.com">Log in</a> here</p>
     </div>
     <div id = "map"></div>
     <script>
@@ -95,14 +94,13 @@
     }
     .info{
         float:left;
-        width: 40%;
-        margin-left: 50px;
+        width: 45%;
     }
     input[type="text"]{
         border-top:none;
         border-left:none;
         border-right:none;
-        background-color:#BDEDFF;
+        background-color:none;
         width:300px;
         font-size:11pt;
     }
@@ -111,7 +109,7 @@
         width: 600px;
         height: 400px;
         margin-top: 150px;
-        margin-right:100px;
+        margin-right:75px;
         align-content:center;
         background-color: grey;
       }
