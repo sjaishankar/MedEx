@@ -7,10 +7,6 @@
 
     <title>New Clinic Registration</title>
 
-    <!-- Angular JS -->
-    <script src="//code.angularjs.org/1.7.0-rc.0/angular.min.js"></script>
-    <script src = "app.js"></script>
-
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -31,22 +27,42 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <h1 class = "title">MedEx New Clinic Registration</h1>
+        <h1 class = "title">MedEx Clinic Registration</h1>
       </div>
     </nav>
-    <form class = "form">
-        <br><br><br><br>
-        <p>Clinic Name: </p>
-        <p><input type = "text" name = "clinicname"></p>
-        <p>Email Address:</p>
-        <p><input type = "text" name = "email"></p>
-        <p>Zip Code:<p>
-        <p><input type = "text" name = "zipcode"></p>
-        <p>Number of Beds:</p>
-        <p><input type = "text" name = "beds"></p>
-        <p><input type = "submit" name = "submit"></p>
-    </form>
-    <!-- Header
+    <div class = "info">
+        <form class = "form">
+            <p>Clinic Name: </p>
+            <p><input type = "text" name = "clinicname"></p>
+            <p>Email Address:</p>
+            <p><input type = "text" name = "email"></p>
+            <p>Zip Code:<p>
+            <p><input type = "text" name = "zipcode" id = "zipcode"></p>
+            <p>Number of Beds:</p>
+            <p><input type = "text" name = "beds"></p>
+            <p><input type = "submit" name = "submit"></p>
+        </form>
+    </div>
+    <div id = "map"></div>
+    <script>
+        var map;
+        var geocoder;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 39.5, lng: -98.35},
+                zoom: 3
+            });
+        }
+        /*function codeAddress() {
+            var zipCode = document.getElementById("zipcode").value;
+            map.setCenter(zipCode.geometry.location);
+        });*/
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2BxSbYZHzLhxHWHKzV2zcVOv-6YOdnkA&callback=initMap"
+    async defer></script>
+
+      <!-- Header
     <header class="masthead">
       <div class="container">
         <div class="intro-text">
@@ -57,8 +73,10 @@
         </div>
       </div>
     </header>  -->
-
-  </body>
+      <!-- Angular JS -->
+    <script src="//code.angularjs.org/1.7.0-rc.0/angular.min.js"></script>
+    <script src = "app.js"></script>
+</body>
 
 <style>
     header.masthead {
@@ -76,8 +94,13 @@
     }
 
     .form{
+        margin-top: 7em;
         margin-left:5em;
         font-size:14pt;
+    }
+    .info{
+        float:left;
+        width: 40%;
     }
     input[type="text"]{
         border-top:none;
@@ -86,4 +109,13 @@
         width:200px;
         font-size:11pt;
     }
+    #map {
+        float:right;
+        width: 600px;
+        height: 400px;
+        margin-top: 150px;
+        margin-right:100px;
+        align-content:center;
+        background-color: grey;
+      }
 </style>
